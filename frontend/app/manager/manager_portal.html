@@ -1,0 +1,24 @@
+<div class="manager-portal large-panel slideInDown animated">
+	<div class="col-sm-12 col-md-5">
+		<h1>Vragen toevoegen</h1>
+		<div class="questions">
+			<div class="question data-block" ng-repeat="question in questions">
+				<p>{{ question.question }}</p>
+			</div>
+			<div class="add-question">
+				<input ng-model="addingQuestionText" type="text" class="form-control add-question-text" placeholder="Vraag toevoegen" autofocus="">
+				<div ng-click="addQuestion()" class="btn btn-md btn-success btn-block">Toevoegen</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-5 col-md-push-1 col-sm-12">
+		<h1>Werknemers inzicht</h1>
+		<div class="graph">
+			<div class="data-block" ng-repeat="employee in employees">
+				<a ui-sref="manager-employee({user_id: employee.user_id})">{{ employee.email }}</a>
+			</div>
+		</div>
+	</div>
+
+</div>

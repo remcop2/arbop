@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Arboplaats</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li ng-class="{active: $state.is('answering')}" ng-if="User.isEmployee()"><a href="#about">Invullen</a></li>
+				<li ng-class="{'active': $state.is('manager')}" ui-sref="manager" ng-if="User.isManager()"><a href="#about">Manager Beheer</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li ng-if="!User.isLoggedIn()"><a ui-sref="login">Login</a></li>
+				<li ng-if="User.isLoggedIn()"><a ng-click="User.logout(true)">Logout</a></li>
+			</ul>
+		</div>
+		<!--/.nav-collapse -->
+	</div>
+</nav>

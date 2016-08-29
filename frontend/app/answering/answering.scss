@@ -1,0 +1,16 @@
+.answering {
+	.question {
+		padding: 20px;
+		border-bottom: 1px solid #e8e8e8;
+		margin-bottom: 30px;
+		background:#f3f3f3;
+		
+		@extend .shadow;
+		
+		h1 {
+			font-style:italic;
+			margin-bottom:25px;
+			font-size:1.8em;
+		}
+	}
+}

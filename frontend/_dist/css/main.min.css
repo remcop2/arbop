@@ -1,0 +1,20 @@
+.login .form-holder{max-width:320px}
+.login .form-holder input{margin-bottom:5px}
+.answering .question{padding:20px;border-bottom:1px solid #e8e8e8;margin-bottom:30px;background:#f3f3f3}
+.answering .question h1{font-style:italic;margin-bottom:25px;font-size:1.8em}
+.manager-portal h1{font-size:1.8em}
+.manager-portal .data-block{background:snow;margin-bottom:5px;padding:5px}
+.manager-portal .add-question{margin-top:20px}
+.manager-portal .add-question .add-question-text{margin-bottom:5px}
+.manager-portal-employee .question{cursor:pointer}
+.manager-portal-employee .question .subtext{font-size:.8em;font-style:italic}
+.manager-portal-employee h1{font-size:1.8em}
+.manager-portal-employee .data-block{background:snow;margin-bottom:5px;padding:5px}
+.manager-portal-employee .employee-title{margin-bottom:25px;font-weight:700}
+body{background-color:#f1f1f1;color:#505050}
+.bold{font-weight:700}
+a{cursor:pointer}
+h1,h2,p{margin:0;padding:0}
+.clear{clear:both}
+.answering .question{box-shadow:0 1px 5px 0 rgba(0,0,0,.34)}
+.manager-portal .data-block,.manager-portal-employee .data-block{box-shadow:0 1px 5px 0 rgba(0,0,0,.06)}

@@ -1,0 +1,29 @@
+<div class="manager-portal-employee large-panel">
+	<div class="col-xs-12">
+		<h1 class="employee-title">{{ employee.email }}</h1>
+	</div>
+	<div class="col-sm-12 col-md-5">
+		<h1>Selecteer vragen</h1>
+		<div class="questions">
+			<div ng-click="toggleQuestion(question.id)" 
+				 class="question data-block" 
+				 ng-repeat="question in questions"
+				 ng-class="{ 'active': questionIsActive(question.id) }"
+				 >
+				<p><span class="bold">#{{question.id}}</span> {{ question.question }}</p>
+				<p class="subtext">{{ getAnswerCount(question.id) }} keer beantwoord</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-5 col-md-push-1 col-sm-12">
+		<h1>Resultaten</h1>
+		<div class="graph">
+			<canvas id="line" class="chart chart-line" chart-data="data"
+			chart-labels="labels" chart-series="series" chart-options="options"
+			chart-dataset-override="datasetOverride" chart-click="onClick"
+			</canvas> 
+		</div>
+	</div>
+
+</div>

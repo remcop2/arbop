@@ -1,0 +1,23 @@
+<div class="container answering">
+	<div ng-if="viewState.is('answers-sending')">
+		Antwoorden aan het versturen...
+	</div>
+	
+	<div ng-if="viewState.is('answers-sent')">
+		Antwoorden zijn succesvol verzonden.
+	</div>
+	
+	<div ng-if="viewState.is('start')" class="questions-holder col-md-6 col-md-push-3 col-xs-12">
+		<div class="question" ng-repeat="question in questions">
+			<h1 class="question-text">{{ question.question }}</h1>
+			<default-slider class="value-slider" question="questions[$index]"></default-slider>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="submit-holder col-md-6 col-md-push-3 col-xs-12">
+		<div ng-click="sendAnswers()" class="btn btn-lg btn-success btn-block">Verzenden</div>
+	</div>
+
+</div>

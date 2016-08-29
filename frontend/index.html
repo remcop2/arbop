@@ -1,0 +1,106 @@
+gulp<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-csp="" ng-app="arboplaats"> <!--<![endif]-->
+
+	<head>
+
+		<base href="/">
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Arboplaats</title>
+		<meta name="description" content="">
+
+		<!-- mobile meta -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+		<!--[if IE]>
+			<link rel="shortcut icon" href="favicon.ico">
+		<![endif]-->
+		<!-- or, set /favicon.ico for IE10 win -->
+		<meta name="msapplication-TileColor" content="#f01d4f">
+
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="bower_components/angularjs-slider/dist/rzslider.css" />
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		
+	</head>
+
+	<body class="main-wrapper">
+	
+		<!--[if lt IE 8]>
+		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Navigation -->
+		<div ui-view="NavbarView"></div>
+		
+		<div ui-view="MainView" class="container"></div>
+
+	</body>
+
+	<!-- Angular external libraries for application -->
+	<!-- build:angularlibs js/angularlibs.js -->
+	<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="bower_components/ngstorage/ngStorage.js"></script>
+	<script type="text/javascript" src="bower_components/angularjs-slider/dist/rzslider.js"></script>
+	<script type="text/javascript" src="node_modules/chart.js/dist/Chart.js"></script>
+	<script type="text/javascript" src="node_modules/angular-chart.js/angular-chart.js"></script>
+	<!-- endbuild -->
+
+	<!-- Angular components -->
+	<!-- build:appcomponents js/appcomponents.js -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/routes.js"></script>
+	<script type="text/javascript" src="app/config.js"></script>
+
+	<script type="text/javascript" src="app/shared/api/api.module.js"></script>
+	<script type="text/javascript" src="app/shared/api/UserAPI.factory.js"></script>	
+	<script type="text/javascript" src="app/shared/api/AnswerAPI.js"></script>	
+	<script type="text/javascript" src="app/shared/api/QuestionAPI.js"></script>	
+
+	<script type="text/javascript" src="app/home/HomeController.js"></script>
+	<script type="text/javascript" src="app/navbar/NavbarController.js"></script>
+	<script type="text/javascript" src="app/login/LoginController.js"></script>
+
+	<script type="text/javascript" src="app/answering/AnsweringController.js"></script>
+	<script type="text/javascript" src="app/answering/defaultSlider.directive.js"></script>
+
+	<script type="text/javascript" src="app/manager/ManagerPortalController.js"></script>
+	<script type="text/javascript" src="app/manager/employee/ManagerEmployeeController.js"></script>
+
+	<script type="text/javascript" src="app/shared/User.service.js"></script>
+
+	<script type="text/javascript" src="app/shared/api/managers/UserManager.service.js"></script>
+	<script type="text/javascript" src="app/shared/api/managers/SurveyManager.service.js"></script>
+	<script type="text/javascript" src="app/shared/api/managers/ResultsManager.service.js"></script>
+
+	<!-- endbuild -->
+
+	<!-- Application sections -->
+	<!-- build:mainapp js/mainapp.js -->
+	
+	<!-- endbuild -->
+
+	
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+	    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	    e.src='https://www.google-analytics.com/analytics.js';
+	    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+	</script>
+
+</html>

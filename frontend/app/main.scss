@@ -1,0 +1,39 @@
+@import "navbar/navbar";
+@import "login/login";
+@import "answering/answering";
+@import "manager/manager_portal";
+@import "manager/employee/employee";
+
+body {
+	background-color: #f1f1f1;
+	color:#505050;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+a {
+	cursor:pointer;
+}
+
+h1, h2, h3, p {
+	margin:0;
+	padding:0;
+}
+
+.clear {
+	clear:both;
+}
+
+.shadow {
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.34);
+}
+
+.lighter-shadow {
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.06);
+}
